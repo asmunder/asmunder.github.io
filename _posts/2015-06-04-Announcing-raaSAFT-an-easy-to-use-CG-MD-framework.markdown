@@ -25,7 +25,7 @@ components in the two phases. Note in particular that the models for CO2 and N2
 have not been fitted to the mixture data in any way, I'm taking the
 models fitted to pure component physical properties and predicting mixture data.
 
-```python
+{% highlight python %}
 from hoomd_script import *
 from mie import *
 from gases_mie import *
@@ -72,7 +72,7 @@ nvt.disable()
 # then change to NPT to get the correct pressure, do production run
 npt=integrate.npt(group=all, T=Temp, P=Pres, tau=0.5, tauP=0.5)
 run(15e6)
-```
+{% endhighlight %}
 
 With [VMD][vmd] and the [density profile plugin][dens] you can then get the
 distribution of each component in the simulation box, and you can of course
