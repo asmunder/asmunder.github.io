@@ -9,13 +9,15 @@ comments: true
 After nine months in the making, I'm very happy to announce the public release
 of raaSAFT, my first free and open source scientific code. raaSAFT, pronounced
 "raw saft", is a Python framework that makes it easy to run coarse-grained
-molecular dynamics simulations of a wide range of chemical compounds. You can
-get the code here: http://bitbucket.org/asmunder/raasaft
+molecular dynamics (MD) simulations of a wide range of chemical compounds. It runs on
+top of the very nice HOOMD-blue MD code.
+
+You can get raaSAFT here: http://bitbucket.org/asmunder/raasaft
 
 ### Show, don't tell
 
 Without further ado I will demonstrate what raaSAFT will let you do. The
-following code snippet is all it takes for you to run a vapor-liquid equilibrium
+following code snippet is all it takes to use raaSAFT for running a vapor-liquid equilibrium
 simulation of the mixture CO<sub>2</sub> - N<sub>2</sub> at 270 Kelvin and 95.86
 bar. This takes about 23 hours to run on a consumer level GPU (the GTX 970) and
 quite accurately reproduces the experimentally observed distribution of the two
@@ -80,7 +82,7 @@ gives you 0.60 (0.58 from experiments). Here's a side view of the system, orange
 is CO<sub>2</sub> and white is N<sub>2</sub>, you can see the liquid phase at
 the right-hand side.
 
-![side view CO2 N2](co2-n2-profile.png)
+<img src="co2-n2-profile.png" alt="CO2 N2 simulation profile" width=90%>
 
 ### On the shoulders of giants 
 
@@ -91,7 +93,9 @@ Imperial College London. You can read more about SAFT-&gamma; Mie and why it's
 a very elegant and thermodynamically consistent method in [this review
 paper][MullerJackson]; suffice it to say here that constructing your model from
 measured physical properties has advantages over the fitting to an atomistic model
-that is often done with other CG approaches. I should mention also that in my
+that is often done with other CG approaches. Also, using a Mie potential offers
+flexibility that you just don't get with the standard Lennard-Jones, in terms of
+the balance between repulsive and attractive forces. I should mention also that in my
 mother tongue, "SAFT" means "fruit juice", and raaSAFT means "pure fruit juice".
 
 The second important building block is [HOOMD-blue][hoomd], a modern GPU-first
@@ -122,6 +126,6 @@ people as possible can use raaSAFT.
 
 [hoomd]: http://codeblue.umich.edu/hoomd-blue/ 
 [MSEsite]: http://molecularsystemsengineering.org/
-[MullerJackson]:
-[vmd]: 
-[dens]: 
+[MullerJackson]: http://dx.doi.org/10.1146/annurev-chembioeng-061312-103314
+[vmd]: http://www.ks.uiuc.edu/Research/vmd/ 
+[dens]: http://multiscalelab.org/utilities/DensityProfileTool 
