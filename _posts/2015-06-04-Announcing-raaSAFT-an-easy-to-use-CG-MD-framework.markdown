@@ -30,7 +30,6 @@ from hoomd_script import *
 from mie import *
 from gases_mie import *
 from utility import *
-import math
 
 # standard HOOMD init made simple
 components = [N2(count=1e4), CO2(count=3e4)]
