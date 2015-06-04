@@ -21,7 +21,7 @@ following code snippet is all it takes to use raaSAFT for running a vapor-liquid
 simulation of the mixture CO<sub>2</sub> - N<sub>2</sub> at 270 Kelvin and 95.86
 bar. This takes about 23 hours to run on a consumer level GPU (the GTX 970) and
 quite accurately reproduces the experimentally observed distribution of the two
-components in the two phases. Note in particular that the models for CO2 and N2
+components in the two phases. Note in particular that the models for CO<sub>2</sub> and N<sub>2</sub>
 have not been fitted to the mixture data in any way, I'm taking the
 models fitted to pure component physical properties and predicting mixture data.
 
@@ -76,11 +76,18 @@ run(15e6)
 
 With [VMD][vmd] and the [density profile plugin][dens] you can then get the
 distribution of each component in the simulation box, and you can of course
-visualize the system. Doing this, you get the molar fraction for CO<sub>2</sub> in
-the liquid as 0.89 (0.86 is the experimental observation), and in the gas it
-gives you 0.60 (0.58 from experiments). Here's a side view of the system, orange
-is CO<sub>2</sub> and white is N<sub>2</sub>, you can see the liquid phase at
-the right-hand side.
+visualize the system. Defining the molar fractions of CO<sub>2</sub> in the gas and the
+liquid as, respectively, as xCO2 and yCO2, we obtain the following quite nice
+result:
+
+|          | raaSAFT  | experimental value |
+| -------- | -------- | -------- |
+| xCO2     | 0.89     | 0.86     |
+| yCO2     | 0.60     | 0.58     |
+
+
+Here's a side view of the system, orange is CO<sub>2</sub> and white is N<sub>2</sub>, you can see the liquid phase at
+the right-hand side:
 
 <img src="http://asmunder.github.io/images/co2-n2-profile.png" alt="CO2 N2 simulation profile" width=90%>
 
