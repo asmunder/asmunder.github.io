@@ -90,7 +90,6 @@ result:
 | yCO2                | 0.89     | 0.86     |
 
 <br></br>
-
 Here's a side view of the system, orange is CO<sub>2</sub> and white is N<sub>2</sub>, you can see the liquid phase at
 the right-hand side:
 
