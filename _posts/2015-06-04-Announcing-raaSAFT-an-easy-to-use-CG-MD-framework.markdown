@@ -77,13 +77,13 @@ run(15e6)
 With [VMD][vmd] and the [density profile plugin][dens] you can then get the
 distribution of each component in the simulation box, and you can of course
 visualize the system. Defining the molar fractions of CO<sub>2</sub> in the gas and the
-liquid as, respectively, as xCO2 and yCO2, we obtain the following quite nice
+liquid as xCO2 and yCO2 respectively, we obtain the following quite nice
 result:
 
-|          | raaSAFT  | experimental value |
-| -------- | -------- | -------- |
-| xCO2     | 0.89     | 0.86     |
-| yCO2     | 0.60     | 0.58     |
+|                     | raaSAFT&nbsp;&nbsp;&nbsp;&nbsp;    | experimental value&nbsp;&nbsp;  |
+| --------            | -------- | -------- |
+| xCO2 &nbsp;&nbsp;&nbsp;&nbsp;    | 0.60     | 0.58     |
+| yCO2                | 0.89     | 0.86     |
 
 
 Here's a side view of the system, orange is CO<sub>2</sub> and white is N<sub>2</sub>, you can see the liquid phase at
