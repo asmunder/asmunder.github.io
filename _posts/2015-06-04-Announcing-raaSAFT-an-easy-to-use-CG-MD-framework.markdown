@@ -32,12 +32,8 @@ from gases_mie import *
 from utility import *
 import math
 
-# set up the components
-N2 = N2(count=1e4)
-CO2 = CO2(count=3e4)
-components = [N2, CO2]
-
-# standard HOOMD init (made simple)
+# standard HOOMD init made simple
+components = [N2(count=1e4), CO2(count=3e4)]
 theBox = setupSimBox(components,elong=3.0,packing=0.5)
 polyDicts = getPolyDicts(components)
 sepDict = getSepDict(components)
@@ -74,9 +70,9 @@ npt=integrate.npt(group=all, T=Temp, P=Pres, tau=0.5, tauP=0.5)
 run(15e6)
 {% endhighlight %}
 
-This may not have the same extreme brevity as some examples, but note that
-everything from the "# set up IO" comment on out is just plain HOOMD-blue code that we
-need to run this system.
+This may not have the same extreme brevity as some examples, but do note that
+everything from the "# set up IO" comment on out (i.e. most of the code) is just plain HOOMD-blue code that we
+cannot avoid if we want to run this system.
 
 OK, so you ran that. With [VMD][vmd] and the [density profile plugin][dens] you can now get the
 distribution of each component in the simulation box, and you can of course
@@ -89,7 +85,7 @@ result:
 | xCO2 &nbsp;&nbsp;&nbsp;&nbsp;    | 0.60     | 0.58     |
 | yCO2                | 0.89     | 0.86     |
 
-<br></br>
+&nbsp;  
 Here's a side view of the system, orange is CO<sub>2</sub> and white is N<sub>2</sub>, you can see the liquid phase at
 the right-hand side:
 
