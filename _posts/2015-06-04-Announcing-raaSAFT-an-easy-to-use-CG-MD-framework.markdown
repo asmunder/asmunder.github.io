@@ -19,7 +19,10 @@ You can get raaSAFT here: http://bitbucket.org/asmunder/raasaft
 Without further ado I will demonstrate what raaSAFT will let you do. The
 following code snippet is all it takes to use raaSAFT for running a vapor-liquid equilibrium
 simulation of the mixture CO<sub>2</sub> - N<sub>2</sub> at 270 Kelvin and 95.86
-bar. This takes about 23 hours to run on a consumer level GPU (the GTX 970) and
+bar. I'm assuming here that you are familiar with how HOOMD-blue simulations are set up
+and run.
+
+The below script takes about 23 hours to run on a consumer level GPU (the GTX 970), and
 quite accurately reproduces the experimentally observed distribution of the two
 components in the two phases. Note in particular that the models for CO<sub>2</sub> and N<sub>2</sub>
 have not been fitted to the mixture data in any way, I'm taking the
@@ -43,7 +46,14 @@ setCutoff(components)
 table = pair.table(width=1000)
 setPotentialCoeffs(components,table,func=Mie)
 setAllCrossCoeff(components,table,func=Mie)
+{% endhighlight %}
 
+And that's all the raaSAFT-specific code you need to set up this particular
+simulation. The rest of your script (let's call it "co2-n2.hoomd") is then as follows, a standard HOOMD-blue
+simulation script that sets up IO and does the integration(s) in the ensemble(s)
+that you want.
+
+{% highlight python %}
 # set up IO
 xml = dump.xml(filename='con.xml', vis=True)
 dump.dcd(filename='dump.dcd', period=2e4)
@@ -69,11 +79,8 @@ npt=integrate.npt(group=all, T=Temp, P=Pres, tau=0.5, tauP=0.5)
 run(15e6)
 {% endhighlight %}
 
-This may not have the same extreme brevity as some examples, but do note that
-everything from the "# set up IO" comment on out (i.e. most of the code) is just plain HOOMD-blue code that we
-cannot avoid if we want to run this system.
-
-OK, so you ran that. With [VMD][vmd] and the [density profile plugin][dens] you can now get the
+OK, so you ran that, i.e. you executed "hoomd co2-n2.hoomd" and waited for it to
+finish. With [VMD][vmd] and the [density profile plugin][dens] you can then get the
 distribution of each component in the simulation box, and you can of course
 visualize the system. Defining the molar fractions of CO<sub>2</sub> in the gas and the
 liquid as xCO2 and yCO2 respectively, we obtain the following quite nice
