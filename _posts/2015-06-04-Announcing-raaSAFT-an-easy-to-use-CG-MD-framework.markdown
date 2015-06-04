@@ -82,7 +82,7 @@ gives you 0.60 (0.58 from experiments). Here's a side view of the system, orange
 is CO<sub>2</sub> and white is N<sub>2</sub>, you can see the liquid phase at
 the right-hand side.
 
-<img src="co2-n2-profile.png" alt="CO2 N2 simulation profile" width=90%>
+<img src="http://asmunder.github.io/images/co2-n2-profile.png" alt="CO2 N2 simulation profile" width=90%>
 
 ### On the shoulders of giants 
 
