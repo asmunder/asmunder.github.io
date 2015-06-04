@@ -9,7 +9,8 @@ comments: true
 After nine months in the making, I'm very happy to announce the public release
 of raaSAFT, my first free and open source scientific code. raaSAFT, pronounced
 "raw saft", is a Python framework that makes it easy to run coarse-grained
-molecular dynamics (MD) simulations of a wide range of chemical compounds. It runs on
+molecular dynamics (MD) simulations of a wide range of chemical compounds. It 
+also makes it easy for the user to add new chemicals. raaSAFT runs on
 top of the very nice HOOMD-blue MD code.
 
 You can get raaSAFT here: http://bitbucket.org/asmunder/raasaft
@@ -49,7 +50,11 @@ setAllCrossCoeff(components,table,func=Mie)
 {% endhighlight %}
 
 And that's all the raaSAFT-specific code you need to set up this particular
-simulation. The rest of your script (let's call it "co2-n2.hoomd") is then as follows, a standard HOOMD-blue
+simulation. If you're curious to see how much code it takes behind the scenes to implement the 
+CO<sub>2</sub> and N<sub>2</sub> models, [look here][co2n2], it's only 21 lines
+for both of them.
+
+The rest of your script (let's call it "co2-n2.hoomd") is then as follows, a standard HOOMD-blue
 simulation script that sets up IO and does the integration(s) in the ensemble(s)
 that you want.
 
@@ -145,3 +150,4 @@ any comments, questions etc. either here or over on Bitbucket.
 [MullerJackson]: http://dx.doi.org/10.1146/annurev-chembioeng-061312-103314
 [vmd]: http://www.ks.uiuc.edu/Research/vmd/ 
 [dens]: http://multiscalelab.org/utilities/DensityProfileTool 
+[co2n2]: https://bitbucket.org/asmunder/raasaft/src/e46cb446749ad4841852575ada18c23687886a37/gases_mie.py?at=master
