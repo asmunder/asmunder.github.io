@@ -74,7 +74,11 @@ npt=integrate.npt(group=all, T=Temp, P=Pres, tau=0.5, tauP=0.5)
 run(15e6)
 {% endhighlight %}
 
-With [VMD][vmd] and the [density profile plugin][dens] you can then get the
+This may not have the same extreme brevity as some examples, but note that
+everything from the "# set up IO" comment on out is just plain HOOMD-blue code that we
+need to run this system.
+
+OK, so you ran that. With [VMD][vmd] and the [density profile plugin][dens] you can now get the
 distribution of each component in the simulation box, and you can of course
 visualize the system. Defining the molar fractions of CO<sub>2</sub> in the gas and the
 liquid as xCO2 and yCO2 respectively, we obtain the following quite nice
@@ -85,6 +89,7 @@ result:
 | xCO2 &nbsp;&nbsp;&nbsp;&nbsp;    | 0.60     | 0.58     |
 | yCO2                | 0.89     | 0.86     |
 
+<br></br>
 
 Here's a side view of the system, orange is CO<sub>2</sub> and white is N<sub>2</sub>, you can see the liquid phase at
 the right-hand side:
@@ -130,6 +135,9 @@ Another feature I have planned is to offer support for using also GROMACS and/or
 LAMMPS as backends. Even though I really like HOOMD-blue, I realize it's not the
 world's most used MD code, so again this is an opportunity to ensure as many
 people as possible can use raaSAFT.
+
+So, I hope raaSAFT will be useful for others, and I'm more than happy to hear
+any comments, questions etc. either here or over on Bitbucket.
 
 [hoomd]: http://codeblue.umich.edu/hoomd-blue/ 
 [MSEsite]: http://molecularsystemsengineering.org/
