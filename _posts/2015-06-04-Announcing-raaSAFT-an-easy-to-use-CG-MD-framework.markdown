@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Announcing raaSAFT, an easy-to-use framework for coarse-grained molecular dynamics simulations
-date:   2015-04-15 10:04:47
+title:  "Announcing raaSAFT, an easy-to-use framework for coarse-grained molecular dynamics simulations"
+date:   2015-06-04 23:45:00
 categories: GPU MD HOOMD raaSAFT announcement
 comments: true
 ---
