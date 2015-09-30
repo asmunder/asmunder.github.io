@@ -7,7 +7,7 @@ comments: true
 ---
 
 Inspired by the recent revelations that VW has been cheating on NOx emissions
-tests, I thought I would put together a simple histogram of car CO2 emissions as
+tests, and subsequent discussions, I thought I would put together a simple histogram of car CO2 emissions as
 reported by car manufacturers. This is done with data taken from
 http://www.carpages.co.uk/co2/ for all cars available in the UK today.
 I picked those with emissions between 94 g/km and 114 g/km, which gave 1 285
