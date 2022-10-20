@@ -8,20 +8,9 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="main" type="MainTab" active="true" scrollx="460.27947283210324" scrolly="164.29895953757227" scale="0.9">
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="0q-0F!QM6_wau^)g2w,[" x="-690" y="50">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <field name="DOUBLE_CLICK">FALSE</field>
-      <field name="LEFT_BUTTON">TRUE</field>
-      <field name="MIDDLE_BUTTON">TRUE</field>
-      <field name="RIGHT_BUTTON">TRUE</field>
-      <value name="VALUE">
-        <shadow type="objectList" id="t7j_7]^i_/ym:/@K*Yu$">
-          <field name="FIELDNAME">Cube.008</field>
-        </shadow>
-      </value>
-      <statement name="DO">
+  <tab name="main" type="MainTab" active="true" scrollx="707.3463860332661" scrolly="157.34327697753906" scale="0.9168418255441505">
+    <block xmlns="https://developers.google.com/blockly/xml" type="checkARMode" id="niOT4MM%pS`z4U/Fo~+4" x="-710" y="70">
+      <statement name="DO_AVAIL">
         <block type="enterARMode" id="x3Hl.hj22Q0e]nKo4n%t">
           <field name="REF_SPACE">ORIGIN</field>
           <field name="ALLOW_HTML">TRUE</field>
