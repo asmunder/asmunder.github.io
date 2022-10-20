@@ -9,16 +9,10 @@
     </block>
   </tab>
   <tab name="main" type="MainTab" active="true" scrollx="707.3463860332661" scrolly="157.343276977539" scale="0.9168418255441505">
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="0q-0F!QM6_wau^)g2w,[" x="-690" y="50">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <field name="DOUBLE_CLICK">FALSE</field>
-      <field name="LEFT_BUTTON">TRUE</field>
-      <field name="MIDDLE_BUTTON">TRUE</field>
-      <field name="RIGHT_BUTTON">TRUE</field>
+    <block xmlns="https://developers.google.com/blockly/xml" type="setTimeout" id="P.X9WGarjW=iD;UQWMY|" x="-710" y="150">
       <value name="VALUE">
-        <shadow type="objectList" id="t7j_7]^i_/ym:/@K*Yu$">
-          <field name="FIELDNAME">Scene</field>
+        <shadow type="math_number" id="o(a-0q4N~k^Q{VZ:dw-7">
+          <field name="NUM">5</field>
         </shadow>
       </value>
       <statement name="DO">
