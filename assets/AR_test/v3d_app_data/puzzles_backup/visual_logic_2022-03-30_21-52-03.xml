@@ -1,0 +1,22 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="true" scrollx="695.5" scrolly="445.5" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="v(WMey/wgIvV0A[;mWnY" x="-510" y="-270">
+      <field name="LOAD_COMP_ASSETS">FALSE</field>
+      <field name="FULLSCREEN">TRUE</field>
+      <field name="BKG_TRANSPARENCY">TRUE</field>
+      <field name="PRESERVE_DRAW_BUF">FALSE</field>
+      <field name="FADE_ANNOTATIONS">TRUE</field>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="false" scrollx="695.5" scrolly="445.5" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="checkARMode" id="+:vpB(FsQ$jh/3/]YoRZ" x="-610" y="-210">
+      <statement name="DO_AVAIL">
+        <block type="enterARMode" id="2kZaJAO-0F2b_)]8NUr_">
+          <field name="REF_SPACE">ROOM</field>
+          <field name="ALLOW_HTML">FALSE</field>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="922.1999999999999" viewport-y="28" viewport-w="626.8" viewport-h="483.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

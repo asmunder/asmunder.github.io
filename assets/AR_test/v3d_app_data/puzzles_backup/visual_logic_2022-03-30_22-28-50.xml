@@ -1,0 +1,153 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="695.5" scrolly="445.5" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="v(WMey/wgIvV0A[;mWnY" x="-510" y="-270">
+      <field name="LOAD_COMP_ASSETS">FALSE</field>
+      <field name="FULLSCREEN">TRUE</field>
+      <field name="BKG_TRANSPARENCY">TRUE</field>
+      <field name="PRESERVE_DRAW_BUF">FALSE</field>
+      <field name="FADE_ANNOTATIONS">TRUE</field>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="true" scrollx="364.12118161994465" scrolly="164.29895953757227" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="0q-0F!QM6_wau^)g2w,[" x="-690" y="50">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="t7j_7]^i_/ym:/@K*Yu$">
+          <field name="FIELDNAME">Cube.008</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="enterARMode" id="x3Hl.hj22Q0e]nKo4n%t">
+          <field name="REF_SPACE">ORIGIN</field>
+          <field name="ALLOW_HTML">TRUE</field>
+          <statement name="DO_ENTER">
+            <block type="arHitTest" id="kx0zWx-=PZG1|~N+5Ciu">
+              <value name="SMOOTH">
+                <shadow type="math_number" id="0abF4{Y8(RE(kkVMOQr#">
+                  <field name="NUM">0.7</field>
+                </shadow>
+              </value>
+              <statement name="DO_HIT">
+                <block type="setObjTransform" id="Pt^HI%Pcwa;!F/oB(u~$">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                  <field name="MODE">scale</field>
+                  <field name="OFFSET">FALSE</field>
+                  <value name="TARGETOBJ">
+                    <shadow type="objectList" id="/V#mSU?)8@C=#*R!+QSQ">
+                      <field name="FIELDNAME">Scene</field>
+                    </shadow>
+                  </value>
+                  <value name="X">
+                    <block type="math_number" id="b#zI[9{f?/h`]38%:s:^">
+                      <field name="NUM">0.03</field>
+                    </block>
+                  </value>
+                  <value name="Y">
+                    <block type="math_number" id="]H4KwJNJiVZPP3+O!}P$">
+                      <field name="NUM">0.03</field>
+                    </block>
+                  </value>
+                  <value name="Z">
+                    <block type="math_number" id="urh2fI$~QKUr.NkJznZ-">
+                      <field name="NUM">0.03</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="setObjTransform" id="v#a9#utSaYYB$**CNWyP">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                      <field name="MODE">position</field>
+                      <field name="OFFSET">FALSE</field>
+                      <value name="TARGETOBJ">
+                        <shadow type="objectList" id="4BMmnp/1pe6-Gy,4UW1@">
+                          <field name="FIELDNAME">Scene</field>
+                        </shadow>
+                      </value>
+                      <value name="X">
+                        <block type="arHitPoint" id="O*kX{IdnDPPY[warIw;V">
+                          <field name="COORD">x</field>
+                        </block>
+                      </value>
+                      <value name="Y">
+                        <block type="arHitPoint" id="nE@Licsb@;$DBa3rXb8w">
+                          <field name="COORD">y</field>
+                        </block>
+                      </value>
+                      <value name="Z">
+                        <block type="arHitPoint" id="/-4K,_zAnYqU}e*u53Rl">
+                          <field name="COORD">z</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="setObjDirection" id="Dh.VPV242[nbb!rs1$MC">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false"></mutation>
+                          <field name="POINT">TRUE</field>
+                          <field name="LOCK_UP">TRUE</field>
+                          <value name="TARGETOBJ">
+                            <shadow type="objectList" id="a?$a{T~/PvWCW8x}dgF3">
+                              <field name="FIELDNAME">Scene</field>
+                            </shadow>
+                          </value>
+                          <value name="X">
+                            <shadow type="math_number" id="]~1Z/yq?-fZ9QSmCZ+zk">
+                              <field name="NUM">1</field>
+                            </shadow>
+                            <block type="getObjTransform" id="UI$%HsJ8`jcki376(m|e">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+                              <field name="MODE">position</field>
+                              <field name="COORD">x</field>
+                              <value name="TARGETOBJ">
+                                <shadow type="objectList" id="jTSw4ELBL8koM3#br|^Z">
+                                  <field name="FIELDNAME">Camera</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="Y">
+                            <shadow type="math_number" id="[dG_d#MXK7sY/}Tnq3!.">
+                              <field name="NUM">0</field>
+                            </shadow>
+                            <block type="getObjTransform" id="5*p}IS2N^3]#}.V|FMIr">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+                              <field name="MODE">position</field>
+                              <field name="COORD">y</field>
+                              <value name="TARGETOBJ">
+                                <shadow type="objectList" id="l/eiOkZZA1U(o8j!rL[M">
+                                  <field name="FIELDNAME">Camera</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="Z">
+                            <shadow type="math_number" id="bb!IIV{:vAEyJdJmK4tS">
+                              <field name="NUM">0</field>
+                            </shadow>
+                            <block type="getObjTransform" id="k5e/xIC^:OjjI!!-~Vwf">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+                              <field name="MODE">position</field>
+                              <field name="COORD">z</field>
+                              <value name="TARGETOBJ">
+                                <shadow type="objectList" id="VND1)0r$,!%mhle.0NRi">
+                                  <field name="FIELDNAME">Camera</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="922.1999999999999" viewport-y="28" viewport-w="626.8" viewport-h="483.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
